@@ -40,12 +40,7 @@ pipeline {
           sh 'mvn clean findbugs:findbugs package'
         }
       }
-      post {
-        success {
-          // we only worry about archiving the jar file if the build steps are successful
-          archiveArtifacts(artifacts: '**/target/*.jar', allowEmptyArchive: true)
-        }
-      }
+      
     }
   }
 }
