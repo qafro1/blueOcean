@@ -1,15 +1,21 @@
 pipeline {
     agent any
-    tools {
-        maven 'localMaven'
-    }
-    stages {
-        stage ('Build') {
-            steps {
-        
-                archiveArtifacts artifacts: '**/target/*.war'
-            }
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
 }
