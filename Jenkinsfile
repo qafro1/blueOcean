@@ -1,7 +1,7 @@
 pipeline {
   agent {
     // executes on an executor with the label 'some-label' or 'docker'
-    label "some-label || docker"
+    label "dev || docker"
   }
 
   stages {
