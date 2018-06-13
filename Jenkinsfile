@@ -11,9 +11,7 @@ pipeline {
   }
 
   // using the Timestamper plugin we can add timestamps to the console log
-  options {
-    timestamps()
-  }
+  
 
   environment {
     //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
